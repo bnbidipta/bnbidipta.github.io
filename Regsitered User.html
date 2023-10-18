@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registered User</title>
+    <link rel="stylesheet" href="Styling Sheet Registered User.css">
+    <link rel="stylesheet" href="Styling Sheet Footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="navbar">
+            <img src = "image 2.jpg" height = "75" width="400" alt="header_logo" class="logo">
+            <nav>
+                <ul id="menuList">
+                    <li><a class="active" href="Home.html">Homepage</a></li>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><a  href="Contact Us.html">Contact us</a></li>
+                    <li><a href="Team.html">Our Team</a></li>
+                    <li><a href="Regsitered User.html">Login</a></li>
+                   
+                </ul>
+            </nav>
+            <img src="res/nav.png" alt="" class="menu-icon" onclick="togglemenu()">
+        </div>  
+        <!----------------------------------------------------------------------------------------->
+        <script>
+            var menuList=document.getElementById("menuList");
+
+            menuList.style.maxHeight="0px";
+
+            function togglemenu(){
+                if( menuList.style.maxHeight=='0px')
+                {
+                    menuList.style.maxHeight="200px";
+                }
+                else
+                {
+                    menuList.style.maxHeight="0px";
+                }
+            }
+        </script>
+      <br><br><br><br>
+    
+
+    <div class = "block">
+    <div class="signin">
+    
+    <fieldset style="align-content: center; width: fit-content;" >
+     
+   
+      <h3>Fill In your Login Details !</h3><br><form action="PHP Login.php" method="post" id="myForm2">
+    <label for ="email">Email Id:</label> 
+    <input type="email" name="email">
+    <br><br>
+    <label for ="password">Password:</label> 
+    <input type="password" name="password" required>
+    <br><br>
+    <a href="PHP New User.php"><input type="button" value="Sign Up"></a><br> <br>
+    <input type="submit" value="Submit">
+    </form>
+    </fieldset>
+</div>
+</div>
+</body>
+<br><br>
+<footer class="footer">
+  <div class="container1">
+      <div class="row1">
+          <div class="footer-col">
+              <h4>About <br> Serene Reserve</h4>
+              <ul>
+                  <li><a href="About Us.html">About us</a></li>
+                  <li><a href="Contact Us.html">Contact us</a></li>
+                  <li><a href="#">Sitemap</a></li>
+                  <li><a href="#">Offers</a></li>
+              </ul>
+          </div>
+
+          <div class="footer-col">
+              <h4>Info</h4>
+              <ul>
+                <li><a href="Team.html">Our Team</a></li>
+                <li><a href="Admin.html">Admin Login</a></li>
+                <li><a href="Privacy Policy.html">Privacy Policy</a></li>
+                <li><a href="Terms and Service.html">T & C</a></li>
+              </ul>
+          </div>
+
+          <div class="footer-col">
+              <h4>Follow us</h4>
+              <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+     
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+const myForm = document.getElementById('myForm2');
+
+myForm.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from actually submitting
+
+    // Your custom logic here
+
+    // Display a pop-up message
+    alert('Form submitted! You will be redirected to the Booking page.');
+
+    // Redirect to "login.html" after a brief delay (e.g., 2 seconds)
+    setTimeout(function () {
+        window.location.href = 'Appointment Page.html';
+    }, 2000); // 2000 milliseconds = 2 seconds
+});
+});
+
+
+</script>
+  
+</html>

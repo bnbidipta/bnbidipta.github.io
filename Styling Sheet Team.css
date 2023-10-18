@@ -1,0 +1,84 @@
+/* Four columns side by side */
+.column {float:left; width: 25%; margin-bottom: 16px; padding: 8px; position:relative; background-image:radial-gradient(white, gainsboro);}
+
+/* Add some shadows to create a card effect */
+.card {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);}
+
+/* Some left and right padding inside the container */
+.container {padding: 0 16px;}
+
+/* Clear floats */
+.container::before, .row::after {content: ""; clear: both; display:block;}
+
+.title {color: grey; }
+
+.button { border: none; outline: 0; display: inline-block; padding: 8px; color: white; background-color: #000; text-align: center; cursor: pointer; width: 100%;}
+
+.button:hover {background-color: #555;}
+
+h1 {text-align: center; font-size: 40px;}
+
+
+body { background-image: url("image 19.jpg"); background-repeat:no-repeat; position: relative; background-size: cover;}
+
+
+.navbar{
+  width: 100%;
+  display: flex;
+  padding-left: 0%;
+  padding-right: 0%;
+  align-items: center;
+  background-image: linear-gradient(#033747, #012733);
+
+  
+  /* border: 2px solid black; */
+  
+  /*  background-image: url('res/navbg.jpg'); */
+  /* background-image: url('res/navbg.jpg');  */
+  
+}
+
+
+.logo{
+  width: 400px;
+  height: 75px;
+  cursor: pointer;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 5%;
+}
+
+.menu-icon{
+  width: 50px;
+  cursor: pointer;
+  margin: 10px 20px;
+  display: none;
+}
+
+nav{
+  flex:1;
+  text-align: right;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:rgb(255, 255, 255);
+  font-size: large;
+  
+}
+nav ul li a:hover{
+  color:#9b82f5;
+  border-bottom: solid 2px red;
+}
+
+nav a.active {
+  color: #fafafa;
+  
+}
